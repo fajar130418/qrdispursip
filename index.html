@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b5cab">
+  <meta name="description" content="QR Dispursip — generator QR Code berlogo profesional untuk URL dan teks.">
+  <title>QR Dispursip — QR Code Berlogo</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://unpkg.com/qr-code-styling@1.9.2/lib/qr-code-styling.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="QR Dispursip">
+      <span class="brand-icon">QR</span>
+      <span><strong>DISPURSIP</strong><small>QR Code Generator</small></span>
+    </a>
+    <nav>
+      <a class="active" href="index.html">Generator</a>
+      <a href="panduan.html">Panduan</a>
+      <a href="about.html">Tentang</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">DIGITAL SERVICE</span>
+        <h1>Buat QR Code <span>berlogo</span> dengan mudah.</h1>
+        <p>Masukkan URL atau teks, tambahkan logo Dispursip, atur tampilannya, lalu unduh QR Code siap digunakan untuk poster, banner, dokumen, dan layanan publik.</p>
+        <div class="hero-pills"><span>✓ Tanpa login</span><span>✓ Preview langsung</span><span>✓ PNG & SVG</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-qr">▦</div>
+        <div class="floating-card">QR DISPURSIP<br><small>Digital • Praktis • Mudah</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container workspace">
+    <div class="panel settings">
+      <div class="panel-heading"><div><span class="step">01</span><h2>Konten QR Code</h2></div></div>
+      <label for="data">URL atau teks</label>
+      <input id="data" type="text" value="https://s.id/SKMperpus" placeholder="Contoh: https://dispursip.go.id">
+
+      <div class="section-divider"></div>
+      <div class="panel-heading"><div><span class="step">02</span><h2>Logo</h2></div></div>
+      <label class="upload-box" for="logoInput" id="dropzone">
+        <div class="upload-icon">↑</div>
+        <strong>Klik untuk upload logo</strong>
+        <span>PNG atau JPG · Disarankan gambar transparan</span>
+      </label>
+      <input id="logoInput" type="file" accept="image/png,image/jpeg" hidden>
+      <div id="logoPreview" class="logo-preview hidden">
+        <img id="logoThumb" alt="Preview logo"><span id="logoName"></span>
+        <button id="removeLogo" class="icon-btn" type="button" title="Hapus logo">×</button>
+      </div>
+
+      <div class="section-divider"></div>
+      <div class="panel-heading"><div><span class="step">03</span><h2>Tampilan</h2></div></div>
+      <div class="control-grid">
+        <div class="control"><label>Ukuran <b><output id="sizeOut">420</output> px</b></label><input id="size" type="range" min="180" max="1000" value="420"></div>
+        <div class="control"><label>Margin <b><output id="marginOut">10</output> px</b></label><input id="margin" type="range" min="0" max="40" value="10"></div>
+        <div class="control"><label>Ukuran logo <b><output id="logoSizeOut">22</output>%</b></label><input id="logoSize" type="range" min="10" max="40" value="22"></div>
+        <div class="control"><label>Warna QR</label><div class="color-control"><input id="dotsColor" type="color" value="#111827"><code id="dotsHex">#111827</code></div></div>
+        <div class="control"><label>Warna latar</label><div class="color-control"><input id="bgColor" type="color" value="#ffffff"><code id="bgHex">#ffffff</code></div></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="downloadPng">Download PNG</button>
+        <button class="btn btn-outline" id="downloadSvg">Download SVG</button>
+        <button class="btn btn-ghost" id="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="panel preview-panel">
+      <div class="preview-head"><div><span class="step">04</span><h2>Preview</h2></div><span class="live"><i></i> LIVE</span></div>
+      <div class="qr-stage"><div id="qrcode"></div></div>
+      <div class="scan-note"><strong>✓ Siap dipindai</strong><span>Gunakan kontras tinggi agar QR Code tetap mudah dibaca.</span></div>
+    </div>
+  </section>
+
+  <section class="container info-strip">
+    <div><strong>Untuk layanan publik</strong><span>Cocok untuk banner, poster, kartu informasi, dokumen, dan publikasi digital.</span></div>
+    <a href="panduan.html">Lihat panduan penggunaan →</a>
+  </section>
+</main>
+
+<footer><div class="container footer-inner"><span>© 2026 DISPURSIP · QR Code Generator</span><span>QR Dispursip</span></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
